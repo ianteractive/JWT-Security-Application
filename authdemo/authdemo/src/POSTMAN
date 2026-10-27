@@ -1,0 +1,30 @@
+POSTMAN API CALL
+---REGISTER------
+POST
+http://localhost:8080/api/auth/register
+{
+  "username": "juan123",
+  "password": "SecurePass123!"
+}
+---LOGIN------
+POST
+http://localhost:8080/api/auth/login
+{
+  "username": "portfolio_admin",
+  "password": "7~tj,aZJ9]8q"
+}
+---TEST------
+GET = Bearer: Token
+http://localhost:8080/api/test/protected
+http://localhost:8080/api/test/user
+http://localhost:8080/api/test/admin
+
+---REFRESH AND LOGOUT
+http://localhost:8080/api/auth/refresh
+{
+  "refreshToken": "AAqy9w6_MLG-7Y9wXWbzx-7magO_6mXUbK9V4Qa4XSc"
+}
+http://localhost:8080/api/auth/logout
+{
+  "refreshToken": "AAqy9w6_MLG-7Y9wXWbzx-7magO_6mXUbK9V4Qa4XSc"
+}
